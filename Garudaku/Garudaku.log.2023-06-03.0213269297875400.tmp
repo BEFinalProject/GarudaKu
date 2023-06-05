@@ -1,0 +1,57 @@
+2023-06-03T17:57:14.133+07:00  WARN 21588 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : java.lang.RuntimeException: ID User tidak boleh null
+2023-06-03T17:58:11.481+07:00  INFO 12020 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 12020 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T17:58:11.483+07:00  INFO 12020 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T17:58:17.846+07:00  INFO 12020 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 6.861 seconds (process running for 7.77)
+2023-06-03T17:58:20.632+07:00  WARN 12020 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+2023-06-03T17:59:02.827+07:00  INFO 22176 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 22176 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T17:59:02.829+07:00  INFO 22176 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T17:59:09.249+07:00  INFO 22176 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 6.92 seconds (process running for 7.874)
+2023-06-03T17:59:17.216+07:00  WARN 22176 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+2023-06-03T18:02:59.998+07:00  INFO 24592 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 24592 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T18:03:00.001+07:00  INFO 24592 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T18:03:06.316+07:00  INFO 24592 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 6.811 seconds (process running for 7.853)
+2023-06-03T18:03:11.319+07:00  WARN 24592 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+2023-06-03T18:06:41.239+07:00  INFO 15372 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 15372 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T18:06:41.241+07:00  INFO 15372 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T18:06:47.528+07:00  INFO 15372 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 6.783 seconds (process running for 7.713)
+2023-06-03T18:06:52.571+07:00  WARN 15372 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+2023-06-03T18:08:02.582+07:00 ERROR 15372 --- [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column u1_0.id_user does not exist
+  Hint: Perhaps you meant to reference the column "u1_0.uid_user".
+  Position: 8
+2023-06-03T18:08:02.594+07:00  WARN 15372 --- [http-nio-8080-exec-7] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id_user,u1_0.birth_date,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.gender,u1_0.modified_at,u1_0.password,u1_0.roles,u1_0.status_active,u1_0.telephone,u1_0.username from public.users u1_0 where u1_0.id_user=?]; SQL [n/a]
+2023-06-03T18:09:21.355+07:00  INFO 8596 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 8596 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T18:09:21.358+07:00  INFO 8596 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T18:09:27.893+07:00  INFO 8596 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 7.045 seconds (process running for 7.987)
+2023-06-03T18:09:37.208+07:00 ERROR 8596 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column u1_0.id_user does not exist
+  Hint: Perhaps you meant to reference the column "u1_0.uid_user".
+  Position: 8
+2023-06-03T18:09:37.218+07:00  WARN 8596 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id_user,u1_0.birth_date,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.gender,u1_0.modified_at,u1_0.password,u1_0.roles,u1_0.status_active,u1_0.telephone,u1_0.username from public.users u1_0 where u1_0.id_user=?]; SQL [n/a]
+2023-06-03T18:09:41.505+07:00 ERROR 8596 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column u1_0.id_user does not exist
+  Hint: Perhaps you meant to reference the column "u1_0.uid_user".
+  Position: 8
+2023-06-03T18:09:41.506+07:00  WARN 8596 --- [http-nio-8080-exec-2] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id_user,u1_0.birth_date,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.gender,u1_0.modified_at,u1_0.password,u1_0.roles,u1_0.status_active,u1_0.telephone,u1_0.username from public.users u1_0 where u1_0.id_user=?]; SQL [n/a]
+2023-06-03T18:21:15.429+07:00  INFO 2400 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 2400 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T18:21:15.435+07:00  INFO 2400 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T18:21:22.189+07:00  INFO 2400 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 7.511 seconds (process running for 8.869)
+2023-06-03T18:22:12.473+07:00 ERROR 2400 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column u1_0.id_user does not exist
+  Hint: Perhaps you meant to reference the column "u1_0.uid_user".
+  Position: 8
+2023-06-03T18:22:12.485+07:00  WARN 2400 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id_user,u1_0.birth_date,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.gender,u1_0.modified_at,u1_0.password,u1_0.photo_profile,u1_0.roles,u1_0.status_active,u1_0.telephone,u1_0.username from public.users u1_0 where u1_0.id_user=?]; SQL [n/a]
+2023-06-03T18:23:16.530+07:00 ERROR 2400 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column u1_0.id_user does not exist
+  Hint: Perhaps you meant to reference the column "u1_0.uid_user".
+  Position: 8
+2023-06-03T18:23:16.531+07:00  WARN 2400 --- [http-nio-8080-exec-5] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id_user,u1_0.birth_date,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.gender,u1_0.modified_at,u1_0.password,u1_0.photo_profile,u1_0.roles,u1_0.status_active,u1_0.telephone,u1_0.username from public.users u1_0 where u1_0.id_user=?]; SQL [n/a]
+2023-06-03T18:27:28.925+07:00  INFO 10468 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 10468 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T18:27:28.928+07:00  INFO 10468 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T18:27:36.148+07:00  INFO 10468 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 7.714 seconds (process running for 8.736)
+2023-06-03T18:27:36.761+07:00 ERROR 10468 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column u1_0.id_user does not exist
+  Hint: Perhaps you meant to reference the column "u1_0.uid_user".
+  Position: 8
+2023-06-03T18:27:36.771+07:00  WARN 10468 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id_user,u1_0.birth_date,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.gender,u1_0.modified_at,u1_0.password,u1_0.photo_profile,u1_0.roles,u1_0.status_active,u1_0.telephone,u1_0.username from public.users u1_0 where u1_0.id_user=?]; SQL [n/a]
+2023-06-03T18:30:09.268+07:00  INFO 16520 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Starting GarudakuApplication using Java 17.0.2 with PID 16520 (E:\Intellij Project\Garudaku\target\classes started by EnVyx in E:\Intellij Project\Garudaku)
+2023-06-03T18:30:09.271+07:00  INFO 16520 --- [restartedMain] c.f.garudaku.GarudakuApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-06-03T18:30:16.058+07:00  INFO 16520 --- [restartedMain] c.f.garudaku.GarudakuApplication         : Started GarudakuApplication in 7.293 seconds (process running for 8.241)
+2023-06-03T18:30:20.772+07:00 ERROR 16520 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column u1_0.id_user does not exist
+  Hint: Perhaps you meant to reference the column "u1_0.uid_user".
+  Position: 8
+2023-06-03T18:30:20.787+07:00  WARN 16520 --- [http-nio-8080-exec-1] c.f.garudaku.Controller.UserController   : org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id_user,u1_0.birth_date,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.gender,u1_0.modified_at,u1_0.password,u1_0.photo_profile,u1_0.roles,u1_0.status_active,u1_0.telephone,u1_0.username from public.users u1_0 where u1_0.id_user=?]; SQL [n/a]
