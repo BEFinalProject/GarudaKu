@@ -17,7 +17,7 @@ public class UserInfoUserDetailsService implements UserDetailsService {
     private UsersRepository ui;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<UsersEntity> userinfo = ui.findByUsername(username);
+        Optional<UsersEntity> userinfo = ui.findByEmail(username);
         return userinfo.map(UserInfoUserDetails::new).orElseThrow(()->new UsernameNotFoundException("Username Doesn't Exsist" + username));
 
     }

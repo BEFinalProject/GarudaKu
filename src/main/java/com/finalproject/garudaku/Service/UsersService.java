@@ -36,7 +36,7 @@ public class UsersService {
         UsersEntity userExist =  R.findById(param.getUid_user()).get();
         userExist.setUsername(param.getUsername());
         userExist.setEmail(param.getEmail());
-        userExist.setPassword(param.getPassword());
+        userExist.setPassword(passwordEncoder.encode(param.getPassword()));
         userExist.setGender(param.getGender());
         userExist.setBirth_date(param.getBirth_date());
         userExist.setFull_name(param.getFull_name());
@@ -48,16 +48,16 @@ public class UsersService {
     }
 
     public UsersEntity addUsers(UsersEntity param) {
-        Optional<UsersEntity> userExist = R.findById(param.getUid_user());
+        Optional<UsersEntity> userExist = R.findByUsername(param.getUsername());
         if (userExist.isPresent()) {
-            throw new RuntimeException("User ID " + param.getUid_user() + " Sudah Ada");
+            throw new RuntimeException("Username " + param.getUsername() + " Sudah Ada");
         }
 
         LocalDateTime currentDateTime = LocalDateTime.now();
         param.setUid_user(generateUUID());
         param.setCreatedAt(currentDateTime);
         param.setPassword(passwordEncoder.encode(param.getPassword()));
-
+        param.setRoles("ROLE_USER");
         return R.save(param);
 
     }

@@ -21,6 +21,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -43,16 +44,36 @@ public class UserController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @PostMapping(value = "/Authenticate")
     public String authenticateAndGetToken(@RequestBody AuthRequest authRequest){
-        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
+        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
         if(authentication.isAuthenticated()){
-            return String.valueOf(jwtService.generateToken(authRequest.getUsername()));
+            return String.valueOf(jwtService.generateToken(authRequest.getEmail()));
         }
         else {
             throw new UsernameNotFoundException("Invalid user resquest !");
         }
 
+    }
+
+    @PostMapping("/Register")
+    @Operation(description = "Menambahkan User Tertentu Dari Database")
+    public CommonResponse<UsersEntity> addUsers(@RequestBody UsersEntity param) {
+        try {
+            UsersEntity user = us.addUsers(param);
+//            Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+//            if(authentication.isAuthenticated()) {
+//
+//            }
+            log.info(String.valueOf(user), "Sukses Menambahkan Data " + user.getUid_user());
+            return urg.succsesResponse(user, "Sukses Menambahkan Data " + user.getUid_user() + " Dengan Token : " + " | "+jwtService.generateToken(user.getUsername()) +" | ");
+        } catch (Exception e) {
+            log.warn(String.valueOf(e));
+            return urg.failedResponse(e.getMessage());
+        }
     }
 
     @GetMapping()
@@ -96,18 +117,7 @@ public class UserController {
 
     }
 
-    @PostMapping("/Register")
-    @Operation(description = "Menambahkan User Tertentu Dari Database")
-    public CommonResponse<UsersEntity> addUsers(@RequestBody UsersEntity param) {
-        try {
-            UsersEntity user = us.addUsers(param);
-            log.info(String.valueOf(user), "Sukses Menambahkan Data " + user.getUid_user());
-            return urg.succsesResponse(user, "Sukses Menambahkan Data " + user.getUid_user());
-        } catch (Exception e) {
-            log.warn(String.valueOf(e));
-            return urg.failedResponse(e.getMessage());
-        }
-    }
+
 
 //    public String registerAndGetToken(AuthRequest authRequest) {
 //        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
